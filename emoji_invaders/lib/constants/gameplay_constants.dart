@@ -26,7 +26,7 @@ class GameplayConstants {
   static const double playerShotSpeed = 300.0;
   static const double enemyShotSpeed = 200.0;
   static const double playerShotCooldown = 0.5;
-  
+
   // Wave progression
   static const double waveSpeedIncrease = 0.1; // 10% increase per wave
   static const double enemyStepDown = 20.0;
