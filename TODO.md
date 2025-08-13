@@ -1,4 +1,9 @@
-# TODO: Flutter Emoji Invaders Game
+# TODO: Flutter Emo## Core Game Loop
+- [x] Initialize game engine (Flame/Built-in CustomPainter if not using Flame)
+- [x] Implement main game loop (update, render)
+- [x] Handle device orientation and screen resizing
+
+## Sprites & Renderingaders Game
 
 ## Project Setup
 - [x] Create new Flutter project
