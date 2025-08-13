@@ -28,7 +28,7 @@ jobs:
     - name: Verify formatting
       run: |
         cd emoji_invaders
-        flutter format --set-exit-if-changed .
+        dart format --set-exit-if-changed lib/ test/
     
     - name: Analyze project source
       run: |
