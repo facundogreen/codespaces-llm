@@ -9,7 +9,7 @@
 
 ## Game Design
 - [x] Define core gameplay (emoji enemies, player ship, shots, formations)
-- [ ] Sketch main screens: Menu, Game, Game Over, High Scores
+- [x] Sketch main screens: Menu, Game, Game Over, High Scores
 
 ## Assets
 - [ ] Select emoji font/emoji images
