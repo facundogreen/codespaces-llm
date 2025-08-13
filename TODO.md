@@ -14,7 +14,7 @@
 ## Assets
 - [x] Select emoji font/emoji images
 - [x] Obtain explosion and shooting sound effects
-- [ ] Design/choose player and enemy representations
+- [x] Design/choose player and enemy representations
 - [ ] Design/choose background images or colors
 
 ## Core Game Loop
