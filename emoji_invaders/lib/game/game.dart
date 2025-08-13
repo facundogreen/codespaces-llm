@@ -10,8 +10,9 @@ class EmojiInvadersGame extends FlameGame {
   // Game state
   bool _isGameRunning = false;
   double _gameTime = 0;
-  late final RectangleComponent _testRect;
-  
+  // Exposed for testing
+  late final RectangleComponent testRect;
+
   @override
   Color backgroundColor() => GameTheme.spaceBackgroundColor;
 
@@ -21,37 +22,37 @@ class EmojiInvadersGame extends FlameGame {
     await SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
     ]);
-    
+
     await super.onLoad();
-    
+
     // Initialize viewport boundaries
     camera.viewport = FixedResolutionViewport(resolution: Vector2(360, 640));
-    
+
     // Create and add a test rectangle to verify the game loop
-    _testRect = RectangleComponent(
+    testRect = RectangleComponent(
       position: Vector2(size.x / 2 - 25, size.y / 2 - 25),
       size: Vector2(50, 50),
       paint: Paint()..color = Colors.white,
     );
-    
-    await add(_testRect);
+
+    await add(testRect);
     _isGameRunning = true;
   }
 
   @override
   void update(double dt) {
     super.update(dt);
-    
+
     if (!_isGameRunning) return;
-    
+
     // Update game time
     _gameTime += dt;
-    
+
     // Test animation: rotate the rectangle based on game time
-    _testRect.angle = _gameTime; // Rotate based on time
-    
+    testRect.angle = _gameTime; // Rotate based on time
+
     // Make it bounce up and down
-    _testRect.position.y = size.y / 2 - 25 + (sin(_gameTime * 2) * 20);
+    testRect.position.y = size.y / 2 - 25 + (sin(_gameTime * 2) * 20);
   }
 
   @override
