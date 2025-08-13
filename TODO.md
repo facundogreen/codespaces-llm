@@ -15,7 +15,7 @@
 - [x] Select emoji font/emoji images
 - [x] Obtain explosion and shooting sound effects
 - [x] Design/choose player and enemy representations
-- [ ] Design/choose background images or colors
+- [x] Design/choose background images or colors
 
 ## Core Game Loop
 - [ ] Initialize game engine (Flame/Built-in CustomPainter if not using Flame)
