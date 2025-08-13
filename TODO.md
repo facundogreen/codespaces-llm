@@ -12,7 +12,7 @@
 - [x] Sketch main screens: Menu, Game, Game Over, High Scores
 
 ## Assets
-- [ ] Select emoji font/emoji images
+- [x] Select emoji font/emoji images
 - [ ] Obtain explosion and shooting sound effects
 - [ ] Design/choose player and enemy representations
 - [ ] Design/choose background images or colors
