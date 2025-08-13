@@ -9,9 +9,9 @@ A fun and modern take on the classic Space Invaders game, built with Flutter and
 - Sound effects and background music
 - High score system
 - Responsive design for various screen sizes
-- Supported platforms:
-  - Android (phones and tablets)
+- Platform:
   - Web browsers (desktop and mobile)
+  - Responsive design for all screen sizes
 
 ## 🚀 Getting Started
 
@@ -19,12 +19,8 @@ A fun and modern take on the classic Space Invaders game, built with Flutter and
 
 - Flutter SDK (latest stable version)
 - Dart SDK
-- For Android development:
-  - Android Studio or Android SDK
-  - An Android device or emulator
-- For web development:
-  - A modern web browser (Chrome recommended)
-  - No additional dependencies required
+- A modern web browser (Chrome recommended)
+- No additional dependencies required
 
 ### Installation
 
@@ -40,23 +36,17 @@ flutter pub get
 ```
 
 3. Run the game:
-
-For Android:
 ```bash
-flutter run -d android  # With a connected device or running emulator
+flutter run -d web-server  # Starts web server
 ```
 
-For Web:
-```bash
-flutter run -d chrome  # Opens in Chrome browser
-```
+The game will be available at `http://localhost:XXXX` (port number will be shown in the console)
 
 ## 🏗️ Project Structure
 
 ```
 emoji_invaders/
-├── android/        # Android platform-specific code
-├── web/           # Web platform-specific code
+├── web/           # Web platform files (index.html, icons, manifest)
 ├── assets/
 │   ├── audio/     # Game sound effects and music
 │   ├── images/    # Game images and backgrounds
