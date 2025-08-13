@@ -1,4 +1,5 @@
 class GameplayConstants {
+  const GameplayConstants._(); // Private constructor to prevent instantiation
   // Player constants
   static const String playerEmoji = '🚀';
   static const double playerSize = 32.0;

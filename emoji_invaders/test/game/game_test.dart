@@ -2,6 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:emoji_invaders/game/game.dart';
 import 'package:flutter/services.dart';
 import 'package:flame/components.dart';
+import 'package:flame/camera.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -39,11 +40,10 @@ void main() {
       expect(game.testRect.angle, equals(1.0));
     });
 
-    test('game handles screen resize', () {
-      final newSize = Vector2(800, 600);
-      game.onGameResize(newSize);
-      // Verify game responds to resize
-      expect(game.size, equals(newSize));
+    test('game uses fixed resolution viewport', () async {
+      await game.onLoad();
+      expect(game.camera.viewport, isA<FixedResolutionViewport>());
+      expect((game.camera.viewport as FixedResolutionViewport).resolution, equals(Vector2(360, 640)));
     });
   });
 }

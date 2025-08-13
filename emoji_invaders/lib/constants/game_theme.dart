@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class GameTheme {
+  const GameTheme._(); // Private constructor to prevent instantiation
   // Background theme
   static const Color spaceBackgroundColor =
       Color(0xFF000B1F); // Deep space blue

@@ -47,7 +47,12 @@ class EmojiInvadersGame extends FlameGame {
 
     // Update game time
     _gameTime += dt;
-
+    
+    // Test animation: rotate the rectangle based on game time
+    testRect.angle = _gameTime; // Rotate based on time
+    
+    // Make it bounce up and down
+    testRect.position.y = size.y / 2 - 25 + (sin(_gameTime * 2) * 20);
     // Test animation: rotate the rectangle based on game time
     testRect.angle = _gameTime; // Rotate based on time
 
@@ -55,9 +60,5 @@ class EmojiInvadersGame extends FlameGame {
     testRect.position.y = size.y / 2 - 25 + (sin(_gameTime * 2) * 20);
   }
 
-  @override
-  void onGameResize(Vector2 canvasSize) {
-    super.onGameResize(canvasSize);
-    // Game will maintain aspect ratio thanks to FixedResolutionViewport
-  }
+  // Viewport resolution is managed by FixedResolutionViewport in onLoad
 }
