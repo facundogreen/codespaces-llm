@@ -1,5 +1,4 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flame_test/flame_test.dart';
 import 'package:emoji_invaders/game/game.dart';
 import 'package:flutter/services.dart';
 import 'package:flame/components.dart';
