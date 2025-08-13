@@ -8,7 +8,7 @@
 - [x] Configure pubspec.yaml for assets (images, emoji fonts, sounds)
 
 ## Game Design
-- [ ] Define core gameplay (emoji enemies, player ship, shots, formations)
+- [x] Define core gameplay (emoji enemies, player ship, shots, formations)
 - [ ] Sketch main screens: Menu, Game, Game Over, High Scores
 
 ## Assets
