@@ -43,7 +43,8 @@ void main() {
     test('game uses fixed resolution viewport', () async {
       await game.onLoad();
       expect(game.camera.viewport, isA<FixedResolutionViewport>());
-      expect((game.camera.viewport as FixedResolutionViewport).resolution, equals(Vector2(360, 640)));
+      expect((game.camera.viewport as FixedResolutionViewport).resolution,
+          equals(Vector2(360, 640)));
     });
   });
 }
