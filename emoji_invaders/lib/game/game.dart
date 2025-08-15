@@ -3,15 +3,12 @@ import 'package:flame/components.dart';
 import 'package:flame/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'dart:math' show sin;
 import '../constants/game_theme.dart';
+import '../components/player.dart';
 
 class EmojiInvadersGame extends FlameGame {
   // Game state
   bool _isGameRunning = false;
-  double _gameTime = 0;
-  // Exposed for testing
-  late final RectangleComponent testRect;
 
   @override
   Color backgroundColor() => GameTheme.spaceBackgroundColor;
@@ -28,14 +25,11 @@ class EmojiInvadersGame extends FlameGame {
     // Initialize viewport boundaries
     camera.viewport = FixedResolutionViewport(resolution: Vector2(360, 640));
 
-    // Create and add a test rectangle to verify the game loop
-    testRect = RectangleComponent(
-      position: Vector2(size.x / 2 - 25, size.y / 2 - 25),
-      size: Vector2(50, 50),
-      paint: Paint()..color = Colors.white,
-    );
+    // Add the player to the game
+    final player = Player();
+    player.position = Vector2(size.x / 2, size.y - 80);
+    add(player);
 
-    await add(testRect);
     _isGameRunning = true;
   }
 
@@ -44,20 +38,6 @@ class EmojiInvadersGame extends FlameGame {
     super.update(dt);
 
     if (!_isGameRunning) return;
-
-    // Update game time
-    _gameTime += dt;
-
-    // Test animation: rotate the rectangle based on game time
-    testRect.angle = _gameTime; // Rotate based on time
-
-    // Make it bounce up and down
-    testRect.position.y = size.y / 2 - 25 + (sin(_gameTime * 2) * 20);
-    // Test animation: rotate the rectangle based on game time
-    testRect.angle = _gameTime; // Rotate based on time
-
-    // Make it bounce up and down
-    testRect.position.y = size.y / 2 - 25 + (sin(_gameTime * 2) * 20);
   }
 
   // Viewport resolution is managed by FixedResolutionViewport in onLoad

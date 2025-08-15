@@ -1,12 +1,5 @@
 # TODO: Emoji invaders
 
-## Core Game Loop
-- [x] Initialize game engine (Flame/Built-in CustomPainter if not using Flame)
-- [x] Implement main game loop (update, render)
-- [x] Handle device orientation and screen resizing
-
-## Sprites & Renderingaders Game
-
 ## Project Setup
 - [x] Create new Flutter project
 - [x] Set up version control (Git)
@@ -25,12 +18,12 @@
 - [x] Design/choose background images or colors
 
 ## Core Game Loop
-- [ ] Initialize game engine (Flame/Built-in CustomPainter if not using Flame)
-- [ ] Implement main game loop (update, render)
-- [ ] Handle device orientation and screen resizing
+- [x] Initialize game engine (Flame/Built-in CustomPainter if not using Flame)
+- [x] Implement main game loop (update, render)
+- [x] Handle device orientation and screen resizing
 
 ## Sprites & Rendering
-- [ ] Render player emoji at bottom of screen
+- [x] Render player emoji at bottom of screen
 - [ ] Render enemies (emoji rows) at top of screen
 - [ ] Animate enemy movement (left/right, down)
 - [ ] Animate player shots (upward) and enemy shots (downward)
