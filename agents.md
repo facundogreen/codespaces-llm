@@ -3,7 +3,9 @@ Work top to bottom through the TODO list.
 Use Flame Engine (already selected) for game loop, sprites, and input handling.
 Prioritize core gameplay before polish or stretch goals.
 Commit frequently to Git with clear messages.
-🎮 Core Game Loop (Complete Initialization)
+Before considering a task done run the script `run_tests.sh` and fix any errors reported.
+
+# Core Game Loop (Complete Initialization)
 Confirm Flame is properly initialized in main() with a GameWidget.
 Ensure update(double dt) and render(Canvas canvas) are implemented in your Game class.
 Use LayoutBuilder or MediaQuery to handle screen resizing; reset game dimensions on resize.
