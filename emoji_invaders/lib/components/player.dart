@@ -10,6 +10,7 @@ class Player extends PositionComponent {
         textRenderer: TextPaint(
           style: const TextStyle(
             fontSize: 48,
+            color: Colors.white,
           ),
         ),
       ),
